@@ -68,7 +68,7 @@ class App extends Component {
 
     return (
       <div className='container'>
-        <h1>Hello World</h1>
+        <h1>Really World</h1>
         <img src={car} alt='awesome' className='annotate-image' />
         <ProgressArc
           height={300}
