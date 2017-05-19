@@ -17,26 +17,26 @@ class H1BGraph extends Component {
 		// debugger;
 		console.log('d3 exists:', d3)
 		let dateFormat = d3.timeFormat("%m/%d/%Y");
+		// debugger
+		d3.csv(this.props.url)
+			// .row((d) => {
+			// 	if (!d['base salary']) {
+			// 		return null;
+			// 	}
 
-		d3.csv('../../public/data/h1bs.csv')
-			.row((d) => {
-				if (!d['base salary']) {
-					return null;
-				}
-
-				return {
-					employer: d.employer,
-					submit_date: dateFormat.parse(d['submit date']),
-					start_date: dateFormat.parse(d['start date']),
-					case_status: d['case status'],
-					job_title: d['job title'],
-					clean_job_title: this.cleanJobs(d['job title']),
-					base_salary: Number(d['base salary']),
-					salary_to: d['salary to'] ? Number(d['salary to']) : null,
-					city: d.city,
-					state: d.state
-				};
-			})
+			// 	return {
+			// 		employer: d.employer,
+			// 		submit_date: dateFormat.parse(d['submit date']),
+			// 		start_date: dateFormat.parse(d['start date']),
+			// 		case_status: d['case status'],
+			// 		job_title: d['job title'],
+			// 		clean_job_title: this.cleanJobs(d['job title']),
+			// 		base_salary: Number(d['base salary']),
+			// 		salary_to: d['salary to'] ? Number(d['salary to']) : null,
+			// 		city: d.city,
+			// 		state: d.state
+			// 	};
+			// })
 			.get((error, rows) => {
 				if (error) {
 					console.error(error);

@@ -66,6 +66,7 @@ class App extends Component {
     
     return (
       <div className='container'>
+        <H1BGraph url="data/h1bs.csv" />
         <h1>Really World</h1>
         <img src={car} alt='awesome' className='annotate-image' />
         <ProgressArc
@@ -81,7 +82,6 @@ class App extends Component {
         <svg>
           <Rectangle />   
         </svg>
-        <H1BGraph />
       </div>
     );
   }
