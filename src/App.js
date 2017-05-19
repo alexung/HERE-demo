@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import car from '../photos/cars1.jpeg';
-import {BarChart, Chart, LineChart} from 'react-d3-basic';
+// import {BarChart, Chart, LineChart} from 'react-d3-basic';
 import * as d3 from 'd3';
-import ProgressArc from './ProgressArc';
+import ProgressArc from './components/Shapes/ProgressArc';
+import Rectangle from './components/Shapes/Rectangle';
+import H1BGraph from './components/H1BGraph/index';
 import './App.css';
 
 class App extends Component {
@@ -28,10 +30,6 @@ class App extends Component {
   }
 
   render() {
-    let chartData = d3.json('./src/data/garbage.csv', (data) => {
-      console.log(data)
-    })
-
     // let chartData = d3.csv("/data/garbage.csv", (data) => {
     //                   // if (error) throw error;
     //                   console.log('data:', data);
@@ -65,7 +63,7 @@ class App extends Component {
         //   return parseDate(d.month);
         // },
         // xScale = 'time';
-
+    
     return (
       <div className='container'>
         <h1>Really World</h1>
@@ -79,7 +77,11 @@ class App extends Component {
           backgroundColor="#e6e6e6"
           foregroundColor="#00ff00"
           percentComplete={0.3}
-        />      
+        />
+        <svg>
+          <Rectangle />   
+        </svg>
+        <H1BGraph />
       </div>
     );
   }
