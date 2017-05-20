@@ -15,7 +15,6 @@ class App extends Component {
       photo1: '../photos/cars1.jpeg',
       color: 'green',
       lineColor: 'red',
-      garbage: []
     }
     this.handleClick = this.handleClick.bind(this);
     this.handleLineClick = this.handleLineClick.bind(this);
@@ -30,40 +29,6 @@ class App extends Component {
   }
 
   render() {
-    // let chartData = d3.csv("/data/garbage.csv", (data) => {
-    //                   // if (error) throw error;
-    //                   console.log('data:', data);
-                      
-    //                   data.forEach((d) => {
-    //                     // let garbage = this.state.garbage.slice();
-    //                     // garbage.push(d);
-    //                     // this.setState({ garbage: garbage })
-    //                     console.log(d)
-    //                   })
-    //                   return data;
-    //                 })
-    // debugger
-        // console.log('this.state', this.state)
-        // width = 500,
-        // height = 300,
-        // margins = {left: 100, right: 100, top: 50, bottom: 50},
-        // // chart series,
-        // // field: is what field your data want to be selected
-        // // name: the name of the field that display in legend
-        // // color: what color is the line
-        // chartSeries = [
-        //   {
-        //     field: 'total',
-        //     name: 'Total',
-        //     color: '#ff7f0e'
-        //   }
-        // ],
-        // // your x accessor
-        // x = function(d) {
-        //   return parseDate(d.month);
-        // },
-        // xScale = 'time';
-    
     return (
       <div className='container'>
         <H1BGraph url="data/h1bs.csv" />
