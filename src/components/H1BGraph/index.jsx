@@ -89,10 +89,10 @@ class H1BGraph extends Component {
 		let params = {
 					bins: 20,
 					width: 500,
-					height: 500,
+					height: 900,
 					axisMargin: 83,
 					topMargin: 10,
-					bottomMargin: 5,
+					bottomMargin: 10,
 					value: (d) => d.base_salary
 				},
 				fullWidth = 700;
