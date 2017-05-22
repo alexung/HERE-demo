@@ -32,7 +32,7 @@ class HistogramBar extends Component {
 							transform={'translate(0, 1)'} />
 				<text textAnchor='end'
 							x={this.props.width}
-							y={height/2 + 7}>
+							y={height/2 + 5}>
 							{label}
 				</text>
 			</g>
