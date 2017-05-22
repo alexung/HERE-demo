@@ -8,10 +8,8 @@ class Axis extends Component {
 		super();
 
 		this.yScale = d3.scaleLinear();
-		// PROBLEM WITH THIS.AXIS... NEED NEW D3 SYNTAX
-		this.axis = d3.svg.axis()
+		this.axis = d3.axisLeft()
 									.scale(this.yScale)
-									.orient('left')
 									.tickFormat((d) => '$' + this.yScale.tickFormat()(d));
 
 		this.update_d3(props);

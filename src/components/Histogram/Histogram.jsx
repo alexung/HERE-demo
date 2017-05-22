@@ -102,6 +102,7 @@ class Histogram extends Component {
 				<g className='bars'>
 					{bars.map(::this.makeBar)}
 				</g>
+				<Axis {...this.props} data={bars}  />
 			</g>
 		);
 	}
